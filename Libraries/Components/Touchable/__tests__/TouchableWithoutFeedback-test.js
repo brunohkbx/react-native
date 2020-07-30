@@ -12,21 +12,24 @@
 
 const React = require('react');
 const Text = require('../../../Text/Text');
-const TouchableHighlight = require('../TouchableHighlight');
+const TouchableWithoutFeedback = require('../TouchableWithoutFeedback');
+
 const render = require('../../../../jest/renderer');
 
-describe('TouchableHighlight', () => {
+describe('TouchableWithoutFeedback', () => {
   it('renders correctly', () => {
     const instance = render.create(
-      <TouchableHighlight style={{}}>
+      <TouchableWithoutFeedback style={{}}>
         <Text>Touchable</Text>
-      </TouchableHighlight>,
+      </TouchableWithoutFeedback>,
     );
 
     expect(instance.toJSON()).toMatchSnapshot();
   });
 
   it('has displayName', () => {
-    expect(TouchableHighlight.displayName).toEqual('TouchableHighlight');
+    expect(TouchableWithoutFeedback.displayName).toEqual(
+      'TouchableWithoutFeedback',
+    );
   });
 });

@@ -12,21 +12,22 @@
 
 const React = require('react');
 const Text = require('../../../Text/Text');
-const TouchableHighlight = require('../TouchableHighlight');
+const TouchableOpacity = require('../TouchableOpacity');
+
 const render = require('../../../../jest/renderer');
 
-describe('TouchableHighlight', () => {
+describe('TouchableOpacity', () => {
   it('renders correctly', () => {
     const instance = render.create(
-      <TouchableHighlight style={{}}>
+      <TouchableOpacity style={{}}>
         <Text>Touchable</Text>
-      </TouchableHighlight>,
+      </TouchableOpacity>,
     );
 
     expect(instance.toJSON()).toMatchSnapshot();
   });
 
   it('has displayName', () => {
-    expect(TouchableHighlight.displayName).toEqual('TouchableHighlight');
+    expect(TouchableOpacity.displayName).toEqual('TouchableOpacity');
   });
 });
